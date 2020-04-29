@@ -1,0 +1,63 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "responses": ["I can guide you through troubleshooting", "Offering support for network  troubleshooting"],
+         "context": [""]
+        },
+        {"tag": "ASA",
+         "patterns": ["How to check ASA commands?", "Check Cisco ASA commands", "ASA Commands", "Cisco ASA commands", "firewall commands"],
+         "responses": [" \n 1.show running-config <- To display the configuration that is currently running on the ASA \n 2.show configuration <-To display the saved configuration in flash memory on the ASA. \n 3.show running-config access-group<-To display the access-group. \n 4.show running-config aaa <- Displays the AAA configuration."],
+         "context": [""]
+        },
+        {"tag": "F5_loadBalancer",
+         "patterns": ["F5 Commands", "Check F5 commands", "loadBalancer commands" ],
+         "responses": [" \n 1.Moving from TMSH to Bash:root@F5(Active)(tmos)# run util bash. \n 2.Moving from Bash to TMSH:root@F5:Active] log #tmsh. \n 3.view system version and hotfix detailed information: show sys version detail. \n 4.view system version and hotfix summary information: show sys version. \n 5.General system configuration: show sys "],
+         "context": [""]
+        },
+        {"tag": "Switch_commands",
+         "patterns": ["switch commands", "switch verion check", "uptime"],
+         "responses": [" \n 1.Show history: Show previously entered commands, \n 2.Show uptime: Displays elapsed time since last boot, \n 3.Show version: Show software version, \n 4.Show stack:Show the stack status of this switch, \n 5.Show modules:Show installed modules information \n \n  https://networkchefbd.com/show-commands/"],
+         "context": [""]
+        },
+        {"tag": "sdwan_commands",
+         "patterns": ["sdwan commands", "silverpeak commands", "silver peak commands" ],
+         "responses": ["\n 1.show system nexthops: shows next hops are reachable or not, \n 2.ping x.x.x.x -I lan0 : used to ping any from a particular interface, \n 3.sho int tunnel summary : It shows all the tuunels formed by sdwan"],
+         "context": [""]
+        },
+        {"tag": "BGP_Commands",
+         "patterns": ["bgp commands", "bgp check", "bgp"],
+         "responses": [" \n show ip bgp [summary] : Shows Neighors IP and state. \n 2.show ip bgp neighbors: shows all BGP neighors. \n 3.show ip route [bgp]: Show all recieved BGP routes."],
+         "context": [""]
+        },
+        {"tag": "Neflow",
+         "patterns": ["netflow", "sflow", "netflow configuration" ],
+         "responses": ["\nfeature sflow \n sflow collector-ip 10.254.99.140 vrf default \n sflow collector-port 9995 \n sflow agent-ip 10.254.33.10 \n sflow data-source interface Ethernet1/41 \n sflow sampling-rate 5000 \n sflow counter-poll-interval 20"],
+         "context": [""]
+        },
+        {"tag": "anyconnect",
+         "patterns": ["cisco vpn", "cisco anyconnect", "anyconnect"],
+         "responses": [" \n 1. show aaa-server :To verify the radius server status. \n 2. sh vpn-sessiondb anyconnect : It Will show all users active connection. \n 3. sh vpn-sessiondb summury : It will show summary of total active connection. \n 4.sh run tunnel-group : It will show all tunnel group profile configured on AnyConnect gateway,You can see all tunnel group. \n 5.sh run group-policy: It will show group policy configured on Gateway. \n 6.sh crypto ca certificate Name: It will show all detail of cert."],
+         "context": [""]
+        }
+   ]
+}
